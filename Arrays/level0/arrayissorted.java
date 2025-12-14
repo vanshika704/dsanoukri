@@ -2,9 +2,9 @@ package Arrays.level0;
 
 public class arrayissorted {
 
-    public static boolean isSorted(int arr[]) {
+    public static boolean isSorted(int arr[]) {int n = arr.length;
         for (int i = 1; i < arr.length; i++) {
-            if (arr[i] < arr[i - 1]) {
+            if (arr[i] < arr[i - 1] % n) {
                 return false;
             }
         }
@@ -12,7 +12,7 @@ public class arrayissorted {
     }
 
     public static void main(String[] args) {
-        int arr[] = new int[]{1, 2, 3, 4, 5};
+        int arr[] = new int[]{ 4, 5, 1, 2, 3};
 
         System.out.println(isSorted(arr)); // true
     }
